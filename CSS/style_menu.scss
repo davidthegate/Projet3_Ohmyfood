@@ -2,6 +2,14 @@ $colour-primary:#9356DC;
 $colour-secondary:#FF79DA;
 $colour-tertiary:#99E2D0;
 
+@mixin for-tablets {
+    @media (min-width: 625px) { @content; }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1024px) { @content; }
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('roboto.eot');
@@ -17,7 +25,6 @@ body {
 }
 
 .bloc_page {
-    max-width: 425px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -26,7 +33,7 @@ body {
 .header {
     &__container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 85%;
     }
     &__logo {
@@ -51,7 +58,6 @@ main {
 
 .menus {
     background-color: ghostwhite;
-
     &__image {
         overflow: hidden;
         width: 100%;
@@ -59,8 +65,13 @@ main {
         margin: 0;
         color: black;
         cursor: pointer;
-        &:hover {
-            height: 100%;
+        @include for-tablets {
+            height: 400px;
+            object-fit: cover;
+        }
+        @include for-desktop {
+            height: 400px;
+            object-fit: cover;
         }
     }
 }
@@ -74,7 +85,6 @@ main {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     transform: translateY(-40px);
-    max-width: 1300px;
     transition-duration: 0.4s;
     &__title {
         display: flex;
@@ -82,6 +92,7 @@ main {
         &__text {
             font-family: "Shrikhand", cursive;
             padding-bottom: 10px;
+            
         }
         &__hearts {
             display: flex;
@@ -119,6 +130,12 @@ main {
         border: none;
         color: white;
         margin: auto;
+        @include for-tablets {
+            width: 30%;
+        }
+        @include for-desktop {
+            width: 20%;
+        }
         &:hover {
             opacity: 0.8;
             box-shadow: 2px 4px 15px #787878;
@@ -127,6 +144,9 @@ main {
 
     .buttons {
         padding-bottom: 30px;
+        @include for-desktop {
+            width: 320px;
+        }
         &__starter {
             animation-name: meal-slide;
             animation-delay: 2s;
@@ -146,6 +166,14 @@ main {
         margin: 5px 0px 10px 0px;
         padding: 0;
         margin-left: 0.5vw;
+    }
+}
+
+.meals {
+    @include for-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 

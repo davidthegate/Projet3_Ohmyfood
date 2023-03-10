@@ -12,7 +12,6 @@ body {
 }
 
 .bloc_page {
-  max-width: 425px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -20,7 +19,7 @@ body {
 
 .header__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 85%;
 }
 .header__logo {
@@ -53,8 +52,19 @@ main {
   color: black;
   cursor: pointer;
 }
-.menus__image:hover {
-  height: 100%;
+@media (min-width: 625px) {
+  .menus__image {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 1024px) {
+  .menus__image {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .menu {
@@ -66,7 +76,6 @@ main {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   transform: translateY(-40px);
-  max-width: 1300px;
   transition-duration: 0.4s;
 }
 .menu__title {
@@ -114,12 +123,27 @@ main {
   color: white;
   margin: auto;
 }
+@media (min-width: 625px) {
+  .menu__button {
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__button {
+    width: 20%;
+  }
+}
 .menu__button:hover {
   opacity: 0.8;
   box-shadow: 2px 4px 15px #787878;
 }
 .menu .buttons {
   padding-bottom: 30px;
+}
+@media (min-width: 1024px) {
+  .menu .buttons {
+    width: 320px;
+  }
 }
 .menu .buttons__starter {
   animation-name: meal-slide;
@@ -137,6 +161,14 @@ main {
   margin: 5px 0px 10px 0px;
   padding: 0;
   margin-left: 0.5vw;
+}
+
+@media (min-width: 1024px) {
+  .meals {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .meal {

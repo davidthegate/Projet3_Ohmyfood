@@ -2,6 +2,14 @@ $colour-primary:#9356DC;
 $colour-secondary:#FF79DA;
 $colour-tertiary:#99E2D0;
 
+@mixin for-tablets {
+    @media (min-width: 625px) { @content; }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1024px) { @content; }
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('roboto.eot');
@@ -83,10 +91,14 @@ body {
 }
 
 .bloc_page {
-    max-width: 458px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+header {
+    width: 100%;
 }
 
 .header {
@@ -119,7 +131,16 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+}
+
+.start {
+    @include for-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
 }
 
 .presentation {
@@ -129,6 +150,10 @@ main {
     padding: 0px 45px;
     background-color: ghostwhite;
     padding-bottom: 50px;
+    @include for-desktop {
+        width: 45%;
+        background-color: white;
+    }
     &__text {
         margin-top: 0;
     }
@@ -141,6 +166,9 @@ main {
         border: none;
         color:white;
         cursor: pointer;
+        @include for-tablets {
+          width: 60%;
+        }
         &:hover {
             opacity: 0.8;
             box-shadow: 2px 4px 15px #787878;
@@ -151,12 +179,16 @@ main {
 .functioning {
     display: flex;
     flex-direction: column;
+    margin: 0px 25px;
     &__nav {
         display: flex;
         flex-direction: column;
         &__block {
             display: flex;
             flex-direction: row;
+            @include for-desktop {
+                width:300px;
+            }
         }
         &__button {
             border-radius: 20px;
@@ -211,20 +243,29 @@ main {
 .restaurants {
     display: flex;
     flex-direction: column;
+    margin: 0px 30px;
     &__cards {
        display: flex;
        flex-direction: column;
        align-items: center;
+       @include for-tablets {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       }
         &__card {
             width: 100%;
             margin-bottom: 50px;
             align-items: center;
+            @include for-tablets {
+                width: 47%;
+                align-items: unset;
+            }
             &:hover {
                 cursor: pointer;
                 background-color: rgba(146, 86, 220, 0.1019607843);
                 box-shadow: rgb(0 0 0 / 44%) 0px 6px 10px;
-                border-bottom-left-radius: 5%;
-                border-bottom-right-radius: 5%;
+                border-radius: 4%;
             }
             a {
                 text-decoration: none;
@@ -259,8 +300,10 @@ main {
         width: 100px;
         padding: 5px;
         position: absolute;
-        right: 8%;
-
+        right: 12%;
+        @include for-tablets {
+            right:unset;
+        }
     }
     &__figcaption {
         display: flex;
