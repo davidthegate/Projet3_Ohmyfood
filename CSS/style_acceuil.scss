@@ -134,15 +134,6 @@ main {
     width: 100%;
 }
 
-.start {
-    @include for-desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        
-    }
-}
-
 .presentation {
     display: flex;
     flex-direction: column;
@@ -151,7 +142,7 @@ main {
     background-color: ghostwhite;
     padding-bottom: 50px;
     @include for-desktop {
-        width: 45%;
+        width: 100%;
         background-color: white;
     }
     &__text {
@@ -168,8 +159,11 @@ main {
         margin: auto;
         text-decoration: none;
         @include for-tablets {
-          width: 60%;
+          width: 45%;
         }
+        @include for-desktop() {
+            width: 30%;
+          }
         &:hover {
             opacity: 0.8;
             box-shadow: 2px 4px 15px #787878;
@@ -181,9 +175,16 @@ main {
     display: flex;
     flex-direction: column;
     margin: 0px 25px;
+    @include for-desktop {
+        flex-direction: column;
+    }
     &__nav {
         display: flex;
         flex-direction: column;
+        @include for-desktop {
+            flex-direction: row;
+            justify-content: space-around;
+        }
         &__block {
             display: flex;
             flex-direction: row;

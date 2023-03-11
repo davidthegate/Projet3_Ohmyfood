@@ -83,6 +83,11 @@ main {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 1024px) {
+  .menu__title {
+    justify-content: center;
+  }
+}
 .menu__title__text {
   font-family: "Shrikhand", cursive;
   padding-bottom: 10px;
@@ -94,6 +99,11 @@ main {
   height: 55px;
   width: 50px;
   margin-top: 12px;
+}
+@media (min-width: 1024px) {
+  .menu__title__hearts {
+    margin-left: 30px;
+  }
 }
 .menu__title__hearts .fa-heart {
   font-size: 1.8em;
@@ -168,7 +178,7 @@ main {
   .meals {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 

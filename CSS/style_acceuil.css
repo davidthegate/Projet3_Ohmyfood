@@ -125,14 +125,6 @@ main {
   width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .start {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-
 .presentation {
   display: flex;
   flex-direction: column;
@@ -143,7 +135,7 @@ main {
 }
 @media (min-width: 1024px) {
   .presentation {
-    width: 45%;
+    width: 100%;
     background-color: white;
   }
 }
@@ -163,7 +155,12 @@ main {
 }
 @media (min-width: 625px) {
   .presentation__button {
-    width: 60%;
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .presentation__button {
+    width: 30%;
   }
 }
 .presentation__button:hover {
@@ -176,9 +173,20 @@ main {
   flex-direction: column;
   margin: 0px 25px;
 }
+@media (min-width: 1024px) {
+  .functioning {
+    flex-direction: column;
+  }
+}
 .functioning__nav {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .functioning__nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .functioning__nav__block {
   display: flex;
