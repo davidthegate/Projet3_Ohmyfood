@@ -30,15 +30,24 @@
                     <div class="presentation">
                         <h1 class="presentation__title">Réservez le menu qui vous convient</h1>
                         <p class="presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                        <a href="#Restaurants"><button class="presentation__button" type="submit" size="10">Explorez nos restaurants</button></a>
+                        <a class="presentation__button" href="#Restaurants">Explorez nos restaurants</a>
                     </div>
                         
                     <div class="functioning">
                         <h1 class="functioning__title">Fonctionnement</h1>
                         <nav class="functioning__nav">
-                            <span class="functioning__nav__block"><p class="functioning__nav__number"> 1</p><button type="submit" class="functioning__nav__button" size="60"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button></span>
-                            <span class="functioning__nav__block"><p class="functioning__nav__number"> 2</p><button type="submit" class="functioning__nav__button"><i class="fa-solid fa-list-ul"></i>Composez votre menu</button></span>
-                            <span class="functioning__nav__block"><p class="functioning__nav__number"> 3</p><button type="submit" class="functioning__nav__button"><i class="fa-sharp fa-solid fa-store"></i></i>Dégustez au restaurant</button></span>
+                            <div class="functioning__nav__block">
+                                <p class="functioning__nav__number"> 1</p>
+                                <button type="submit" class="functioning__nav__button"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
+                            </div>
+                            <div class="functioning__nav__block">
+                                <p class="functioning__nav__number"> 2</p>
+                                <button type="submit" class="functioning__nav__button"><i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
+                            </div>
+                            <div class="functioning__nav__block">
+                                <p class="functioning__nav__number"> 3</p>
+                                <button type="submit" class="functioning__nav__button"><i class="fa-sharp fa-solid fa-store"></i>Dégustez au restaurant</button>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -124,18 +133,20 @@
             </main>
             <footer>
                 <div class="footer">
-                    <ul class="footer__list">
-                        <li class="footer__title">ohmyfood</li>
-                        <li><i class="fa-solid fa-utensils"></i>  Proposer un restaurant</li>
-                        <li><i class="fa-solid fa-handshake-angle"></i>  Devenir partenaire</li>
-                        <li>Mentions légales</li>
-                        <a class="footer__contact" href="mailto:ohmyfood@contact.mail"><li>Contact</li></a>
-                    </ul>
+                    <div class="footer__list">
+                        <p class="footer__title">ohmyfood</p>
+                        <p><i class="fa-solid fa-utensils"></i>  Proposer un restaurant</p>
+                        <p><i class="fa-solid fa-handshake-angle"></i>  Devenir partenaire</p>
+                        <p>Mentions légales</p>
+                        <a class="footer__contact" href="mailto:ohmyfood@contact.mail"><p>Contact</p></a>
+                    </div>
                 </div>
             </footer>
-        </div>   
+        </div>  
+        <div class="block-loader">
+            <div class="loader">
+                <p class="loader__title">Ohmyfood</p>
+            </div>
+        </div> 
     </body>
-    <div class="block-loader">
-        <span class="loader"><p class="loader__title">Ohmyfood</p></span>
-    </div>
 </html>

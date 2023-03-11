@@ -47,6 +47,7 @@ body {
         font-size: 25px;
         margin-top: 18px;
         cursor: pointer;
+        color: black;
     }
 }
 
@@ -91,8 +92,7 @@ main {
         justify-content: space-between;
         &__text {
             font-family: "Shrikhand", cursive;
-            padding-bottom: 10px;
-            
+            padding-bottom: 10px;  
         }
         &__hearts {
             display: flex;
@@ -271,7 +271,7 @@ footer {
     &__list {
         list-style-type: none;
         padding: 0;
-        line-height: 1.8em;
+        line-height: 0.8em;
     }
     &__title {
         font-family: 'Shrikhand', cursive;

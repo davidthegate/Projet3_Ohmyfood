@@ -151,14 +151,15 @@ main {
   margin-top: 0;
 }
 .presentation__button {
-  width: 75%;
-  margin-left: 10px;
+  width: 70%;
   border-radius: 45px;
   padding: 17px 0px 17px 0px;
   background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   border: none;
   color: white;
   cursor: pointer;
+  margin: auto;
+  text-decoration: none;
 }
 @media (min-width: 625px) {
   .presentation__button {
@@ -365,7 +366,7 @@ footer {
 .footer__list {
   list-style-type: none;
   padding: 0;
-  line-height: 1.8em;
+  line-height: 0.8em;
 }
 .footer__title {
   font-family: "Shrikhand", cursive;

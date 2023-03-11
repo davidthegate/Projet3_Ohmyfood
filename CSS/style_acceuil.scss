@@ -158,14 +158,15 @@ main {
         margin-top: 0;
     }
     &__button {
-        width: 75%;
-        margin-left: 10px;
+        width: 70%;
         border-radius: 45px;
         padding: 17px 0px 17px 0px;
         background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
         border: none;
         color:white;
         cursor: pointer;
+        margin: auto;
+        text-decoration: none;
         @include for-tablets {
           width: 60%;
         }
@@ -363,7 +364,7 @@ footer {
     &__list {
         list-style-type: none;
         padding: 0;
-        line-height: 1.8em;
+        line-height: 0.8em;
     }
     &__title {
         font-family: 'Shrikhand', cursive;
