@@ -337,19 +337,17 @@ main {
 .pictured-card__figcaption__text .text__name {
   font-weight: bold;
 }
-
-.favorite__ico {
+.pictured-card .favorite__ico {
   font-size: 1.5em;
   position: absolute;
   background-color: white;
   transition: opacity 1000ms ease-in-out;
   font-weight: 400;
 }
-.favorite__ico:hover {
+.pictured-card .favorite__ico:hover {
   opacity: 0;
 }
-
-.favorite__ico--color {
+.pictured-card .favorite__ico--color {
   font-size: 1.5em;
   font-weight: 900;
   background: linear-gradient(#ff79da, #9356dc);

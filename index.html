@@ -13,12 +13,14 @@
     </head>
     <body>
         <div class="bloc_page">
+            <!--Haut de page-->
             <header>
                 <div class="header">
                     <div class="header__container">
                         <img class="header__logo" src="Logo/ohmyfood.png" alt="Logo Oh My Food">
                     </div>
-                    <form class="header__form" method="post">  <!-- Formulaire de recherche -->
+                    <!--Formulaire de recherche-->
+                    <form class="header__form" method="post">  
                         <i class="fa-solid fa-location-dot"></i>
                         <input class="header__form__input" type="search" name="location_dot" value=" Paris, Belleville">
                     </form>
@@ -26,6 +28,7 @@
             </header>
 
             <main>
+                <!--Introduction du site Ohmyfood-->
                 <div class="start">
                     <div class="presentation">
                         <h1 class="presentation__title">Réservez le menu qui vous convient</h1>
@@ -35,6 +38,7 @@
                         
                     <div class="functioning">
                         <h1 class="functioning__title">Fonctionnement</h1>
+                        <!--Navigation principale-->
                         <nav class="functioning__nav">
                             <div class="functioning__nav__block">
                                 <p class="functioning__nav__number"> 1</p>
@@ -51,20 +55,24 @@
                         </nav>
                     </div>
                 </div>
-
+                <!--Partie des cartes de restaurants-->
                 <div class="restaurants"> 
                     <h1 id="Restaurants" class="restaurants__title">Restaurants</h1>
                     <div class="restaurants__cards">
+                        <!--Carte du restaurant La palette du gout-->
                         <div class="restaurants__cards__card">
                             <a href="menu_La_palette_du_gout.html">
                                 <figure class="pictured-card">
+                                    <!--Image du restaurant-->
                                     <img class="pictured-card__image" src="Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt= "La palette du goût">
                                     <p class="pictured-card__new">Nouveau</p>
                                     <figcaption class="pictured-card__figcaption">
+                                        <!--Nom du restaurant-->
                                         <div class="pictured-card__figcaption__text">
                                             <p class="text__name">La palette du goût</p>
                                             <p class="text__place">Ménilmontant</p>
                                         </div>
+                                        <!--Icone de restaurant favori qui change de couleur au survol-->
                                         <div class="pictured-card__figcaption__hearts">
                                             <i class='far fa-heart favorite__ico'></i>
                                             <i class='fas fa-heart favorite__ico--color'></i>
@@ -73,17 +81,20 @@
                                 </figure>
                             </a>
                         </div>
-
+                        <!--Carte du restaurant La note enchantée-->
                         <div class="restaurants__cards__card">
                             <a href="menu_La_note_enchantée.html">
                                 <figure class="pictured-card">
+                                    <!--Image du restaurant-->
                                     <img class="pictured-card__image" src="Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt= "La note enchantée">
                                     <p class="pictured-card__new">Nouveau</p>
                                     <figcaption class="pictured-card__figcaption">
+                                        <!--Nom du restaurant-->
                                         <div class="pictured-card__figcaption__text">
                                             <p class="text__name">La note enchantée</p>
                                             <p class="text__place">Charonne</p>
                                         </div>
+                                        <!--Icone de restaurant favori qui change de couleur au survol-->
                                         <div class="pictured-card__figcaption__hearts">
                                             <i class='far fa-heart favorite__ico'></i>
                                             <i class='fas fa-heart favorite__ico--color'></i>
@@ -92,16 +103,19 @@
                                 </figure>
                             </a>
                         </div>
-
+                        <!--Carte du restaurant A la française-->
                         <div class="restaurants__cards__card">
                             <a href="menu_A_la_française.html">
                                 <figure class="pictured-card">
+                                    <!--Image du restaurant-->
                                     <img class="pictured-card__image" src="Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt= "A la française">
                                     <figcaption class="pictured-card__figcaption">
+                                        <!--Nom du restaurant-->
                                         <div class="pictured-card__figcaption__text">
                                             <p class="text__name">A la française</p>
                                             <p class="text__place">Cité rouge</p>
                                         </div>
+                                        <!--Icone de restaurant favori qui change de couleur au survol-->
                                         <div class="pictured-card__figcaption__hearts">
                                             <i class='far fa-heart favorite__ico'></i>
                                             <i class='fas fa-heart favorite__ico--color'></i>
@@ -110,16 +124,19 @@
                                 </figure>
                             </a>
                         </div>
-
+                        <!--Carte du restaurant Le délice des sens-->
                         <div class="restaurants__cards__card">
                             <a href="menu_Le_délice_des_sens.html">
                                 <figure class="pictured-card">
+                                    <!--Image du restaurant-->
                                     <img class="pictured-card__image" src="Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt= "Le délice des sens">
                                     <figcaption class="pictured-card__figcaption">
+                                        <!--Nom du restaurant-->
                                         <div class="pictured-card__figcaption__text">
                                             <p class="text__name">Le délice des sens</p>
                                             <p class="text__place">Folie-Méricourt</p>
                                         </div>
+                                        <!--Icone de restaurant favori qui change de couleur au survol-->
                                         <div class="pictured-card__figcaption__hearts">
                                             <i class='far fa-heart favorite__ico'></i>
                                             <i class='fas fa-heart favorite__ico--color'></i>
@@ -132,17 +149,20 @@
                 </div>   
             </main>
             <footer>
+                <!--Pied de page-->
                 <div class="footer">
                     <div class="footer__list">
                         <p class="footer__title">ohmyfood</p>
                         <p><i class="fa-solid fa-utensils"></i>  Proposer un restaurant</p>
                         <p><i class="fa-solid fa-handshake-angle"></i>  Devenir partenaire</p>
                         <p>Mentions légales</p>
+                        <!--Renvoi vers une addresse mail-->
                         <a class="footer__contact" href="mailto:ohmyfood@contact.mail"><p>Contact</p></a>
                     </div>
                 </div>
             </footer>
-        </div>  
+        </div> 
+        <!--Loading spinner--> 
         <div class="block-loader">
             <div class="loader">
                 <p class="loader__title">Ohmyfood</p>

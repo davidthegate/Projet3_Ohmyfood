@@ -1,21 +1,24 @@
+//Variables de couleurs
 $colour-primary:#9356DC;
 $colour-secondary:#FF79DA;
 $colour-tertiary:#99E2D0;
 
+//Mixins pour le responsive design (tablettes et ordinateurs)
 @mixin for-tablets {
     @media (min-width: 625px) { @content; }
 }
-
 @mixin for-desktop {
     @media (min-width: 1024px) { @content; }
 }
 
+//Polices spécifiques
 @font-face {
     font-family: 'Roboto';
     src: url('roboto.eot');
     src: url('roboto.eot?#iefix') format('embedded-opentype'),url('roboto.woff') format('woff'),url('roboto.ttf') format('truetype'),url('roboto.svg#roboto') format('svg');
 }
 
+//Corps de la page
 body {
     font-family: Roboto, Arial, serif ;
     color: black;
@@ -24,12 +27,14 @@ body {
     align-items: center;
 }
 
+//Bloc contenant la page de menu
 .bloc_page {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
+//Haut de page
 .header {
     &__container {
         display: flex;
@@ -51,12 +56,14 @@ body {
     }
 }
 
+//Partie principale de la page 
 main {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
+//La partie contenant les différents menus 
 .menus {
     background-color: ghostwhite;
     &__image {
@@ -77,6 +84,7 @@ main {
     }
 }
 
+//Partie de chaque menu 
 .menu {
     padding: 15px 15px 10px 15px;
     background-color: ghostwhite;
@@ -147,7 +155,7 @@ main {
             box-shadow: 2px 4px 15px #787878;
         }
     }
-
+    //Les différents plats par menu
     .buttons {
         padding-bottom: 30px;
         @include for-desktop {
@@ -164,7 +172,7 @@ main {
         font-size: 1em;
         font-weight: normal;
     }
-
+    //Sous-lignage de couleur verte
     .underline {
         width: 40px;
         height: 0.2em;
@@ -175,6 +183,7 @@ main {
     }
 }
 
+//Liste des plats (entrées, plats de résistance et desserts
 .meals {
     @include for-desktop {
         display: flex;
@@ -182,7 +191,6 @@ main {
         justify-content: space-around;
     }
 }
-
 .meal {
     display: flex;
     justify-content: space-between;
@@ -202,17 +210,18 @@ main {
     &:hover {
         cursor: pointer;
         box-shadow: rgb(0 0 0 / 44%) 0px 6px 10px;
+        //Animation de sélection
         & .meal__check {
             opacity: 1;
             width: 70px;
             transition: width .6s, opacity .6s;
         } 
+        //Icone de sélection
         & .fa-check-circle {
             transform: rotate(0deg);
             transition: transform 1s;
         }
     }
-   
     &__text {
         display: flex;
         flex-direction: column;
@@ -255,13 +264,14 @@ main {
         opacity: 0;
         
     }
-    
     .fa-check-circle {
         font-size: 25px;
         color: white;
         transform: rotate(180deg);
     }
 }
+
+//Pied de page
 footer {
     width:100%;
 }
@@ -294,6 +304,7 @@ footer {
     }
 }
 
+//Keyframe pour l'animation d'apparition en cascade des différents plats
 @keyframes meal-slide {
     0% {
         transform: scale(0);
@@ -303,8 +314,11 @@ footer {
     }
 }  
 
-@for $i from 1 to 10 {
+//La boucle @for a répété dix fois le bloc de code,
+//en changeant la valeur de $i (appelée indice de la boucle)
+//à chaque itération et en utilisant l'index comme suffixe pour le nom --meal
+@for $i from 1 to 11 {
     .meal-#{$i} {
-        animation-delay: #{$i/10}s;
+        animation-delay: #{$i/11}s;
     }
 }
