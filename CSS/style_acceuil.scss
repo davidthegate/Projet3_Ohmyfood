@@ -269,6 +269,9 @@ main {
                 background-color: rgba(146, 86, 220, 0.1019607843);
                 box-shadow: rgb(0 0 0 / 44%) 0px 6px 10px;
                 border-radius: 4%;
+                .favorite__ico {
+                    background-color: transparent;
+                }
             }
             a {
                 text-decoration: none;

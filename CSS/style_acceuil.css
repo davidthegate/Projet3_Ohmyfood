@@ -278,6 +278,9 @@ main {
   box-shadow: rgba(0, 0, 0, 0.44) 0px 6px 10px;
   border-radius: 4%;
 }
+.restaurants__cards__card:hover .favorite__ico {
+  background-color: transparent;
+}
 .restaurants__cards__card a {
   text-decoration: none;
   color: black;
